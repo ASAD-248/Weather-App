@@ -1,0 +1,275 @@
+@font-face {
+  font-family: "beybas";
+  src: url(./assests/font/BebasNeue-Regular.ttf);
+}
+@font-face {
+  font-family: pop;
+  src: url(./assests/font/Poppins-Bold.ttf);
+}
+@font-face {
+  font-family: roboto;
+  src: url(./assests/font/RobotoCondensed-VariableFont_wght.ttf);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.weatherApp {
+  width: 100%;
+  height: 100vh;
+  background: rgb(0, 23, 143);
+  background: linear-gradient(30deg, rgb(0, 23, 143) 0%, rgb(255, 190, 253) 84%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.weatherApp .content {
+  width: 80%;
+  height: 85vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px;
+  /* From https://css.glass */
+  background: rgba(255, 255, 255, 0.23);
+  border-radius: 16px;
+  backdrop-filter: blur(4.8px);
+  -webkit-backdrop-filter: blur(4.8px);
+  border: 1px solid rgba(255, 255, 255, 0.44);
+}
+.weatherApp .content .container {
+  width: 95%;
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.weatherApp .content .container .wrap {
+  width: 100%;
+}
+.weatherApp .content .container .wrap nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+.weatherApp .content .container .wrap nav .logo h1 {
+  color: white;
+  font-family: beybas;
+  letter-spacing: 3px;
+  font-size: 2rem;
+}
+.weatherApp .content .container .wrap nav .inp_box {
+  width: 70%;
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+.weatherApp .content .container .wrap nav .inp_box .fa-magnifying-glass {
+  color: rgb(0, 0, 0);
+  position: absolute;
+  left: 20px;
+  font-size: 20px;
+}
+.weatherApp .content .container .wrap nav .inp_box .serchBtn {
+  height: 40px;
+  width: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+  border: none;
+  color: rgb(0, 0, 0);
+  padding: 0px;
+  font-size: 15px;
+  font-family: roboto;
+  background: rgba(255, 255, 255, 0.12);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(15.3px);
+  -webkit-backdrop-filter: blur(15.3px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  transition: all ease-in-out 0.2s;
+}
+.weatherApp .content .container .wrap nav .inp_box .serchBtn:hover {
+  background-color: rgb(0, 0, 0);
+  color: white;
+}
+.weatherApp .content .container .wrap nav .inp_box .serch_bar {
+  width: 100%;
+  height: 40px;
+  border-radius: 20px;
+  border: none;
+  color: rgb(0, 0, 0);
+  padding: 0px 0px 0px 6%;
+  font-size: 17px;
+  background: rgba(255, 255, 255, 0.12);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(15.3px);
+  -webkit-backdrop-filter: blur(15.3px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+.weatherApp .content .container .wrap nav .inp_box .serch_bar:focus {
+  border: none;
+}
+.weatherApp .content .container .wrap .hero {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+.weatherApp .content .container .wrap .hero .texts_wrap {
+  display: grid;
+  grid-template-columns: 470px 470px 470px;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  margin-top: 50px;
+}
+.weatherApp .content .container .wrap .hero .texts_wrap .left {
+  display: flex;
+  flex-direction: column;
+}
+.weatherApp .content .container .wrap .hero .texts_wrap .left h4 {
+  font-size: 6rem;
+  font-family: roboto;
+  text-transform: uppercase;
+  color: white;
+  font-weight: 300;
+}
+.weatherApp .content .container .wrap .hero .texts_wrap .left .title_city {
+  color: white;
+  font-family: beybas;
+  text-transform: uppercase;
+  font-size: 5rem;
+  letter-spacing: 5px;
+}
+.weatherApp .content .container .wrap .hero .texts_wrap .left .weather_txts {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.weatherApp .content .container .wrap .hero .texts_wrap .left .weather_txts .row {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+.weatherApp .content .container .wrap .hero .texts_wrap .left .weather_txts .row h6 {
+  color: white;
+  font-family: roboto;
+  font-size: 2.5rem;
+  font-weight: 300;
+  letter-spacing: 0px;
+}
+.weatherApp .content .container .wrap .hero .texts_wrap .left .weather_txts .row .mini_icon {
+  height: 40px;
+  width: 40px;
+  overflow: hidden;
+}
+.weatherApp .content .container .wrap .hero .texts_wrap .left .weather_txts .row .lighTxt {
+  font-weight: lighter !important;
+  color: white !important;
+  font-size: 2rem;
+  font-family: roboto;
+}
+.weatherApp .content .container .wrap .hero .texts_wrap .left .weather_txts h5 {
+  font-size: 4rem;
+  font-family: roboto;
+  text-transform: uppercase;
+  color: white;
+  font-weight: 300;
+  letter-spacing: 4px;
+}
+.weatherApp .content .container .wrap .hero .texts_wrap .left .weather_txts .icon_text {
+  display: flex;
+  gap: 1rem;
+  margin-top: 20px;
+  align-items: center;
+  justify-content: start;
+}
+.weatherApp .content .container .wrap .hero .texts_wrap .left .weather_txts .icon_text .icon {
+  color: white;
+  font-size: 2rem;
+}
+.weatherApp .content .container .wrap .hero .texts_wrap .left .weather_txts .icon_text .icon .drop_icon {
+  height: 40px;
+  width: 40px;
+}
+.weatherApp .content .container .wrap .hero .texts_wrap .left .weather_txts .icon_text .chance {
+  color: white;
+  font-size: 3rem;
+  font-family: roboto;
+  font-weight: lighter;
+}
+.weatherApp .content .container .wrap .hero .texts_wrap .center_con {
+  display: flex;
+  width: 100%;
+}
+.weatherApp .content .container .wrap .hero .texts_wrap .center_con .img_wrap {
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.weatherApp .content .container .wrap .hero .texts_wrap .center_con .img_wrap .imag_txt {
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+  align-items: center;
+}
+.weatherApp .content .container .wrap .hero .texts_wrap .center_con .img_wrap .imag_txt .weather_clear .weather_text {
+  display: flex;
+  flex-direction: column;
+  color: white;
+  font-size: 3.5rem;
+  font-family: roboto;
+  text-transform: uppercase;
+  font-weight: 200;
+}
+.weatherApp .content .container .wrap .hero .texts_wrap .center_con .img_wrap .weather_text {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+}
+.weatherApp .content .container .wrap .hero .texts_wrap .center_con .img_wrap .weather_text span {
+  color: white;
+  font-size: 3.5rem;
+  font-family: roboto;
+  text-transform: uppercase;
+  font-weight: 200;
+}
+.weatherApp .content .container .wrap .hero .texts_wrap .center_con .img_wrap .cloud {
+  height: 300px;
+  width: 300px;
+}
+.weatherApp .content .container .wrap .hero .texts_wrap .digree {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.weatherApp .content .container .wrap .hero .texts_wrap .digree .celcius_icon {
+  height: 120px;
+  width: 120px;
+}
+.weatherApp .content .container .wrap .hero .texts_wrap .digree h1 {
+  position: relative;
+  color: white;
+  font-family: roboto;
+  font-size: 15rem;
+  font-weight: lighter;
+}
+.weatherApp .content .container .wrap .hero .texts_wrap .digree h1 .cel {
+  font-family: roboto;
+  font-size: 5rem;
+  font-weight: lighter;
+  margin-top: -20px;
+  position: relative;
+  top: -20px;
+  right: -5px;
+}/*# sourceMappingURL=style.css.map */

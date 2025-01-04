@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather app</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section class="weatherApp">
+        <div class="content">
+            <div class="container">
+                <div class="wrap">
+                    <nav>
+                        <!-- <div class="logo">
+                           <h1>WEATHER APP</h1> 
+                        </div> -->
+                        <div class="inp_box">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <input class="serch_bar" id="city_inp" type="serch" placeholder="Enter City Name">
+                        <button class="serchBtn" id="serch_btn" onclick="getData()" >Serch</button>
+                        </div>
+                        <div class="logo">
+                            <!-- <h1>WEATHER APP</h1>  -->
+                         </div>
+                    </nav>
+                    <header class="hero">
+                        <!-- <div class="row">
+                            <div class="title">
+                                <h2>City Name</h2>
+                            </div>
+                        </div> -->
+                        <div class="texts_wrap">
+                            <div class="left">
+                                <h2  class="title_city" id="city_text">City Name</h2>
+                                <div class="weather_txts">
+                                    <div class="row">
+                                        <img class="mini_icon" src="./assests/icon/sunset.png" alt="">
+                                        <h6>
+                                            Sunset
+                                        </h6>
+                                        <span class="lighTxt" id="sunset"> 7:00</span>
+                                    </div>
+                                    <div class="row">
+                                        <img class="mini_icon" src="./assests/icon/sun-shining.png" alt="">
+                                        <h6 >
+                                             Sunrise 
+                                        </h6>
+                                        <span class="lighTxt" id="sunrise"> 17:20</span>
+                                    </div>
+                                    <div class="row">
+                                        <img class="mini_icon"  src="./assests/img/water-drop.png"" alt="">
+                                        <h6 >
+                                             Humidit 
+                                        </h6>
+                                        <span class="lighTxt" id="rain_per" > 17</span>
+                                    </div>
+                                    <div class="row">
+                                        <img class="mini_icon" src="./assests/icon/windy.png" alt="">
+                                        <h6 >
+                                            Wind
+                                        </h6>
+                                        <span class="lighTxt" id="wind_sp"> 6km/h</span>
+                                    </div>
+                                </div>
+
+                                <!-- <div class="icon_text">
+                                    <span id="rain_icon" class="icon"><img class="drop_icon" src="./assests/img/water-drop.png" alt=""></span>
+                                    <span id="rain_per" class="chance">25%</span>
+                                </div> -->
+                            </div>
+                            <div class="center_con">
+                                <div class="img_wrap">
+                                    <div class="imag_txt">
+                                        <div class="weather_text">
+                                        <img id="cloudImg" class="cloud" src="./assests/img/cloudy (1).png" alt="">
+
+                                        </div>
+                                        <div class="weather_clear">
+                                        <span class="weather_text" id="weather_txt">Partly cloudly</span>
+                                        </div>
+                            
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="right">
+                                <div class="digree">
+                                    <img src="./assests/icon/thermometer (1).png" alt="" class="celcius_icon">
+                                    <h1 class="cel_txt" id="temText">
+                                        22<sup class="cel">°C </sup>
+                                    </h1>
+                                </div>
+                            </div>  
+                        </div>
+                    </header>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+
+    <script src="./app.js"></script>
+    <script src="https://kit.fontawesome.com/1ac82f4868.js" crossorigin="anonymous"></script>
+</body>
+</html>
